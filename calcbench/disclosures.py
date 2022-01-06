@@ -77,7 +77,7 @@ def disclosure_dataframe(
       >>> data = calcbench.disclosure_dataframe(company_identifiers=["msft", "goog"],
       >>>                                     all_history=True,
       >>>                                     disclosure_names=["ManagementsDiscussionAndAnalysis", "RiskFactors"])
-      >>> word_counts = data.applymap(lambda disclosure: disclosure.get_contents_text().split()
+      >>> word_counts = data.applymap(lambda disclosure: disclosure.get_contents_text().split(),
       >>>                             na_action="ignore")
 
     """
@@ -175,7 +175,7 @@ class FootnoteTypeTitle(str, Enum):
     Other = "Other"
     OtherExpenses = "Other Expenses"
     RelatedDocuments = "Related Documents (8-Ks, Proxys & Letters)"
-    RevenueFromContractWithCustomer = "Revenuefrom Contract With Customer"
+    RevenueFromContractWithCustomer = "Revenue from Contracts With Customers"
     Segment = "Segment"
     PolicyTextBlock = "Policy Text Block"
     TextBlock = "Text Block"
